@@ -2,7 +2,6 @@ package GUI;
 
 import Model.MySQL;
 import com.formdev.flatlaf.intellijthemes.materialthemeuilite.FlatGitHubDarkIJTheme;
-import com.formdev.flatlaf.themes.FlatMacDarkLaf;
 import java.sql.ResultSet;
 import java.util.Vector;
 import javax.swing.DefaultComboBoxModel;
@@ -39,7 +38,7 @@ public class Home extends javax.swing.JFrame {
     private void loadUserTable() {
 
         try {
-            ResultSet resultSet = MySQL.execute("SELECT * FROM `user` INNER JOIN `city` ON `user`.`city_c_id`=`city`.`c_id`;");
+            ResultSet resultSet = MySQL.execute("SELECT * FROM `user2` INNER JOIN `city` ON `user`.`city_c_id`=`city`.`c_id`;");
 
             DefaultTableModel defaultTableModel = (DefaultTableModel) jTable1.getModel();       // Casting
             defaultTableModel.setRowCount(0);
